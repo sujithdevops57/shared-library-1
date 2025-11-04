@@ -1,4 +1,4 @@
-package com.sujith.builds;
+package com.sujith.builds
 
 class Calculator{
     def jenkins 
