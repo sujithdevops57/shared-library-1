@@ -1,4 +1,4 @@
-import com.Calculator
+import com.sujith.builds.Calculator
 
 def call(Map pipelineParams){
    Calculator cal = new Calculator(this)
