@@ -9,7 +9,7 @@ pipeline{
     agent {
         label 'sujith-label1'
     }
-   environment {
+    environment {
         APPLICATION_NAME = "${pipelineParams.appName}"
     }
     stages {
@@ -24,7 +24,7 @@ pipeline{
         }
        stage('Build'){
            steps {
-            echo "*******building the application*********"
+            echo "*******building the application for ${env.APPLICATION_NAME}*********"
            }
        }
 
