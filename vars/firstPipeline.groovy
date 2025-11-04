@@ -7,7 +7,10 @@ def call(Map pipelineParams){
 
 pipeline{
     agent {
-        label ''
+        label 'sujith-label1'
+    }
+   environment {
+        APPLICATION_NAME = "${pipelineParams.appName}"
     }
     stages {
 
