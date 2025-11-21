@@ -1,0 +1,24 @@
+@Library ("spring-sujith") _ // import com.venkat.sharedlib.Utils
+pipeline {
+    agent {
+        label "sujith-label1"
+    }
+
+    stages {
+        stage('maven-buliding'){
+            steps{
+                mavenBuild()
+            }
+        }
+      stage("Docker Build"){
+        steps{
+            DockerBuild("my-java-app:mod1")
+        }
+      } 
+      stage("Docker Run"){
+        steps{
+            runContainer("my-java-app:latest","myjava",8989,8080)
+        }
+      }
+    }
+}
